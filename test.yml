@@ -4,5 +4,4 @@
 
   tasks:
     - ping:
-    - shell: sleep 120
-    - include_vars: /var/lib/awx/projects/_32__02558872/vars/vars.yml
+    - include_vars: /opt/ansible/vars/vars.yml
