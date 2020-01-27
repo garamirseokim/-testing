@@ -4,3 +4,4 @@
 
   tasks:
     - ping:
+    - include_vars: vars/vars.yml
