@@ -4,4 +4,5 @@
 
   tasks:
     - ping:
+    - shell: sleep 120
     - include_vars: vars/vars.yml
