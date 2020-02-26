@@ -4,4 +4,3 @@
 
   tasks:
     - ping:
-    - include_vars: /opt/ansible/vars/vars.yml
