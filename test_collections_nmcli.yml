@@ -12,7 +12,7 @@
       
   - name: Add two IPv4 DNS server addresses
     community.general.nmcli:
-      conn_name: my-eth1
+      conn_name: eth0
       type: ethernet
       dns4:
       - 192.0.2.53
