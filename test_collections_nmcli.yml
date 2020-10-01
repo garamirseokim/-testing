@@ -8,9 +8,6 @@
     ansible.builtin.package:
       name:
         - NetworkManager-libnm
-        - nm-connection-editor
-        - libsemanage-python
-        - policycoreutils-python
       state: present
       
 
