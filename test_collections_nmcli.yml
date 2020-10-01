@@ -15,6 +15,6 @@
       conn_name: eth0
       type: ethernet
       dns4:
-      - 192.0.2.53
-      - 198.51.100.53
+      - 192.0.2.54
+      - 198.51.100.54
       state: present
