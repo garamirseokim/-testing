@@ -11,5 +11,4 @@
       state: present
       
   - name: Add a br-mgmt interface
-    community.general.nmcli::
-
+    community.general.nmcli:
