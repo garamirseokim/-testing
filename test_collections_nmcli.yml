@@ -10,4 +10,39 @@
         - NetworkManager-libnm
       state: present
       
+  - name: Add a br-mgmt interface
+    nmcli:
+      state: present
+      conn_name: br-mgmt
+      ifname: br-mgmt
+      type: bridge
+      autoconnect: yes
 
+  - name: Add a br-mgmt interface
+    community.general.nmcli:
+      state: present
+      conn_name: br-mgmt
+      ifname: br-mgmt
+      type: bridge
+      autoconnect: yes
+    
+  - name: Add a br-mgmt interface
+    nmcli:
+      state: present
+      conn_name: br-mgmt
+      ifname: br-mgmt
+      type: bridge
+      autoconnect: yes
+      ip4: ''
+      gw4: ''
+      ip6: ''
+      gw6: ''
+      stp: yes
+      priority: 12
+      slavepriority: 32
+      forwarddelay: 15
+      hellotime: 2
+      maxage: 20
+      ageingtime: 300
+      hairpin: yes
+      path_cost: 100
