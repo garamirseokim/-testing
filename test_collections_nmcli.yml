@@ -10,13 +10,11 @@
         - NetworkManager-libnm
       state: present
       
-##### Working with all cloud nodes - Teaming
-  - name: Try nmcli add team - conn_name only & ip4 gw4
+  - name: Add an Ethernet connection with static IP configuration
     community.general.nmcli:
-      type: team
-      conn_name: '{{ item.conn_name }}'
-      ip4: '{{ item.ip4 }}'
-      gw4: '{{ item.gw4 }}'
+      conn_name: my-eth1
+      ifname: eth1
+      type: ethernet
+      ip4: 192.168.100.230/24
+      gw4: 192.168.100.230
       state: present
-    with_items:
-      - '{{ nmcli_team }}'
