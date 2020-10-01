@@ -10,3 +10,13 @@
         - NetworkManager-libnm
       state: present
       
+##### Working with all cloud nodes - Teaming
+  - name: Try nmcli add team - conn_name only & ip4 gw4
+    community.general.nmcli:
+      type: team
+      conn_name: '{{ item.conn_name }}'
+      ip4: '{{ item.ip4 }}'
+      gw4: '{{ item.gw4 }}'
+      state: present
+    with_items:
+      - '{{ nmcli_team }}'
