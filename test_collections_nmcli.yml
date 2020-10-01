@@ -10,5 +10,11 @@
         - NetworkManager-libnm
       state: present
       
-  - name: Add a br-mgmt interface
+  - name: Add two IPv4 DNS server addresses
     community.general.nmcli:
+      conn_name: my-eth1
+      type: ethernet
+      dns4:
+      - 192.0.2.53
+      - 198.51.100.53
+      state: present
