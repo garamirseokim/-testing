@@ -19,7 +19,7 @@
       autoconnect: yes
 
   - name: Add a br-mgmt interface
-    community.general.nmcli:
+    nmcli:
       state: present
       conn_name: br-mgmt
       ifname: br-mgmt
