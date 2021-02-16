@@ -3,14 +3,8 @@
   gather_facts: false
 
   vars:
-    pause_seconds: 180
+    pause_seconds: 10
 
   tasks:
-    - pause:
-        seconds: "{{ pause_seconds }}"
-
-    - ansible.posix.selinux:
-        state: disabled
-
     - pause:
         seconds: "{{ pause_seconds }}"
